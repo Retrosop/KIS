@@ -11,7 +11,7 @@ namespace LR_One
         {
             Console.WriteLine("Lab # 1");
             Console.WriteLine();
-            Console.WriteLine("by Gavriil 29.07.2002 town: Birobidzhan");
+            Console.WriteLine("by Gavriil 29.07.2002 town: Birobidzhan BARA BARA BARA");
             Console.WriteLine("physical culture is my favorite school subject ");
             Console.WriteLine("I like coding, math and study chinesse language ");
             Console.WriteLine("1201 grup");
