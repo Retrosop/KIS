@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Desktop\\ConsoleApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Documents\\GitHub\\KIS\\Gavriil\\BD_planning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD0E9BAB-A02D-4C1F-B256-BB8569D9DD3C}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\\u0432\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\desktop\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD0E9BAB-A02D-4C1F-B256-BB8569D9DD3C}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\\u0432\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\documents\\github\\kis\\gavriil\\bd_planning\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD0E9BAB-A02D-4C1F-B256-BB8569D9DD3C}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Desktop\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Documents\\GitHub\\KIS\\Gavriil\\BD_planning\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Desktop\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D\u0430\\Documents\\GitHub\\KIS\\Gavriil\\BD_planning\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAgwE4AAAAcAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAcwEwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T02:44:04.389Z",
               "EditorCaption": ""

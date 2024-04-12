@@ -40,8 +40,6 @@ class MyProgram
                 passport = "CDabadabac",
                 height = 150,
                 Netto = 6666
-
-
             }
 
         };
@@ -76,7 +74,7 @@ class MyProgram
             if (v.lastname == "1234") {
                 v.firstname = "empty";
                 v.lastname = "empty";
-                v.Age = "empty";
+                v.Age = 12;
 
             
             } ;
