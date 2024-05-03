@@ -16,17 +16,6 @@ namespace ConsoleAppAccess
 			public string? Telef { get; set; }
 			public string? Email { get; set; }
 		}
-<<<<<<< HEAD
-		/*
-        Название поля   Смысл					Тип			Длина
-			IdPostav    Номер поставщика		Int			11
-			Postav		Наименование поставщика VarChar		50
-			Gorod		Город поставщика		VarChar		20
-			Ulica		Улица поставщика		VarChar		20
-			Telef		Телефон поставщика		VarChar		15
-
-		*/
-
 		public class Postav
 		{
 			public int IdPostav { get; set; }
@@ -37,9 +26,6 @@ namespace ConsoleAppAccess
 
 
         }
-
-        public class DataContext : DbContext
-=======
 		public class Tovar
 		{
 			[Key]
@@ -59,7 +45,6 @@ namespace ConsoleAppAccess
 		}
 
 		public class DataContext : DbContext
->>>>>>> bc5bd9b63ea5d14fbe4d91d7cf379b7bbba257c5
 		{
 			public DbSet<Client> Client { get; set; }
 
