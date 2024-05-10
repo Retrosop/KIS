@@ -10,15 +10,18 @@ namespace ConsoleAppAccess
 		public class Client
 		{
 			[Key]
-			public int IdClient { get; set; }
-			public string Name{ get; set; }
+			public int Id { get; set; }
+			public string? NameClient{ get; set; }
 			public string? Adress { get; set; }
 			public string? Telef { get; set; }
 			public string? Email { get; set; }
+			public DateTime? DateBirthday { get; set; }
+			public bool Gender { get; set; }
+
 		}
 		public class Postav
 		{
-			public int IdPostav { get; set; }
+			public int Id { get; set; }
 			public string? NamePostav { get; set; }
             public string? Gorod { get; set; }
             public string? Ulica { get; set; }
@@ -29,7 +32,7 @@ namespace ConsoleAppAccess
 		public class Tovar
 		{
 			[Key]
-			public int IdTovar { get; set; }
+			public int Id { get; set; }
 			public string Name { get; set; }
 			public string Edizm { get; set; }
 			public decimal Zena { get; set; }
@@ -37,7 +40,7 @@ namespace ConsoleAppAccess
 		public class Prihod
 		{
 			[Key]
-			public int IdPrihod { get; set; }
+			public int Id { get; set; }
 			public int IdTovar { get; set; }
 			public int IdPostav { get; set; }
 			public DateTime DatPrih { get; set; }

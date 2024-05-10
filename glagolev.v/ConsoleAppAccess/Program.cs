@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using static ConsoleAppAccess.DBModel;
@@ -23,51 +24,50 @@ namespace ConsoleAppAccess
 			//	Добавление
 			using (DataContext db = new DataContext())
 			{
-				//add
+				//Добавление записей в таблицу Клиенты
+				Client newClient = new Client();
+				newClient.NameClient = "Тестов Тест";
+				newClient.Telef = "11111";
+				newClient.Adress = "Тестовая улица, 1";
+				newClient.Email = "test@mail.ru";
+				//Дата рождения 1 декабря 2000 года
+				newClient.DateBirthday = new DateTime(2000,12,01);
+				//Пол, true - мужской
+				newClient.Gender = true;
+				db.Client.Add(newClient);
+				db.SaveChanges();
 
-				//Client cl1 = new Client();
-				//cl1.NameClient = "Максимов Степан";
-				//cl1.Telef = "41112";
-				//cl1.Adress = "Широкая 32";
-				//cl1.Email = "re@mail.ru";
 
-
-				//db.Client.Add(cl1);
-				//db.SaveChanges();
-
-
-				//update
-				Client s2 = db.Client.SingleOrDefault(s => s.Id == 1);
-				if (s2 != null)
+				//Обновление телефона клиента в строке с первичным ключом Id = 1 в таблице Клиенты
+				newClient = db.Client.SingleOrDefault(s => s.Id == 1);
+				if (newClient != null)
 				{
-					s2.Telef = "454545";
+					newClient.Telef = "454545";
 					db.SaveChanges();
 				}
 
-				//delete
-
-				Client s1 = db.Client.SingleOrDefault(s => s.Id == 2);
-				if (s1 != null)
+				//Удаление строки в таблице Клиенты с первичным ключом Id=2
+				newClient = db.Client.SingleOrDefault(s => s.Id == 2);
+				if (newClient != null)
 				{
 					//удаляем объект
-					db.Client.Remove(s1);
+					db.Client.Remove(newClient);
 					db.SaveChanges();
 				}
 
-
-				//select
-				var sall = db.Client.Select(x => x.Telef);
-				foreach (var s in sall)
+				//Выборка все телефонов клиентов из таблицы Клиенты
+				var allTelef = db.Client.Select(x => x.Telef);
+				foreach (var xtelef in allTelef)
 				{
-					Console.WriteLine($"{s}");
+					Console.WriteLine($"{xtelef}");
 				}
 
-				var sall1 = db.Client;
-				foreach (var xs in sall1)
+				//Выборка всех клиентов из таблицы Клиенты
+				var allClient = db.Client;
+				foreach (var xclient in allClient)
 				{
-					Console.WriteLine($"{xs.NameClient} - {xs.Telef}");
+					Console.WriteLine($"{xclient.NameClient} - {xclient.Telef}");
 				}
-				Console.WriteLine("HW");
 			}
 		}
 	}
