@@ -7,23 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="addTovar" Content="Добавить" HorizontalAlignment="Left" Margin="52,376,0,0" VerticalAlignment="Top" Height="28" Width="105" Click="addTovar_Click"/>
-        <Button x:Name="deleteTovar" Content="Удалить" HorizontalAlignment="Left" Margin="200,379,0,0" VerticalAlignment="Top" Height="25" Width="113"/>
-        <Button x:Name="editTovar" Content="Редактировать" HorizontalAlignment="Left" Margin="454,377,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.78,3.998" Height="27" Width="129"/>
-        <Button x:Name="updateTovar" Content="Обновить" HorizontalAlignment="Left" Margin="623,379,0,0" VerticalAlignment="Top" Height="25" Width="132"/>
-        <Label Content="Название" HorizontalAlignment="Left" Margin="66,24,0,0" VerticalAlignment="Top"/>
-        <Label Content="Единица измерения" HorizontalAlignment="Left" Margin="66,69,0,0" VerticalAlignment="Top"/>
-        <Label Content="Цена" HorizontalAlignment="Left" Margin="66,99,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textboxName" HorizontalAlignment="Left" Margin="204,28,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textboxEdizm" HorizontalAlignment="Left" Margin="204,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textboxZena" HorizontalAlignment="Left" Margin="204,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="52,141,41,87">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Button x:Name="productShow" Content="Товары" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.745,-1.013" Height="54" Width="133" Click="tovarShow_Click"/>
+        <Button x:Name="postavShow" Content="Поставщики" HorizontalAlignment="Left" Margin="213,28,0,0" VerticalAlignment="Top" Height="54" Width="145"/>
+        <Button x:Name="prihodShow" Content="Приход" HorizontalAlignment="Left" Margin="410,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.149,-1.691" Height="54" Width="151"/>
+        <Button x:Name="queryShow" Content="Запросы" HorizontalAlignment="Left" Margin="618,30,0,0" VerticalAlignment="Top" Height="50" Width="133"/>
+        <Button x:Name="reportShow" Content="Отчет" HorizontalAlignment="Left" Margin="24,128,0,0" VerticalAlignment="Top" Height="55" Width="133"/>
+        <Button x:Name="aboutShow" Content="О программе" HorizontalAlignment="Left" Margin="213,128,0,0" VerticalAlignment="Top" Height="55" Width="145"/>
+        <Button x:Name="sysShow" Content="Настройки" HorizontalAlignment="Left" Margin="410,128,0,0" VerticalAlignment="Top" Height="52" Width="151"/>
 
     </Grid>
 </Window>

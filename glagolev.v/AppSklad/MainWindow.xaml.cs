@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Collections.ObjectModel;
+using System.Windows;
+using static ConsoleAppAccess.DBModel;
 
 namespace AppSklad
 {
@@ -12,9 +14,10 @@ namespace AppSklad
 			InitializeComponent();
 		}
 
-		private void addTovar_Click(object sender, RoutedEventArgs e)
+		private void tovarShow_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Товар добавлен!");
+			ProductForm ProductForm = new ProductForm();
+			ProductForm.Show();
 		}
-    }
+	}
 }

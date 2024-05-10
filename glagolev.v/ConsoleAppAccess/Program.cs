@@ -73,22 +73,22 @@ namespace ConsoleAppAccess
                 //Select tovar as ‘Товар’ from tovar where zena > 10
                 Console.WriteLine("Найти товары дороже 10 рублей\r\n");
 
-				Tovar newTovar = new Tovar();
-				newTovar.Name = "Телевизор";
-				newTovar.Edizm= "шт";
-				newTovar.Zena = 5000;
-				db.Tovar.Add(newTovar);
+				Product newProduct = new Product();
+				newProduct.Name = "Телевизор";
+				newProduct.Measurement= "шт";
+				newProduct.Price = 5000;
+				db.Product.Add(newProduct);
 				db.SaveChanges();
 				
-				newTovar = new Tovar();
-				newTovar.Name = "Ручка";
-				newTovar.Edizm = "шт";
-				newTovar.Zena = 5;
-				db.Tovar.Add(newTovar);
+				newProduct = new Product();
+				newProduct.Name = "Ручка";
+				newProduct.Measurement = "шт";
+				newProduct.Price = 5.99f;
+				db.Product.Add(newProduct);
 				db.SaveChanges();
 
-				var allTovar = db.Tovar.Where(x => x.Zena > 10).Select(x => x);
-				foreach (var xtovar in allTovar)
+				var allProduct = db.Product.Where(x => x.Price > 10).Select(x => x);
+				foreach (var xtovar in allProduct)
 				{
 					Console.WriteLine($"{xtovar.Name}");
 				}

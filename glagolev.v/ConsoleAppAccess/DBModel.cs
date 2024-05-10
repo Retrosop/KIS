@@ -19,23 +19,31 @@ namespace ConsoleAppAccess
 			public bool Gender { get; set; }
 
 		}
-		public class Postav
-		{
-			public int Id { get; set; }
-			public string? NamePostav { get; set; }
-            public string? Gorod { get; set; }
-            public string? Ulica { get; set; }
-            public string? Telef { get; set; }
-
-
-        }
-		public class Tovar
+		//Поставщик продукции
+		public class Supplier
 		{
 			[Key]
 			public int Id { get; set; }
+			//Название поставщика
+			public string? Name { get; set; }
+			//Город
+            public string? City { get; set; }
+			//Улица
+            public string? Street{ get; set; }
+			//Телефон
+            public string? Phone { get; set; }
+
+        }
+		public class Product
+		{
+			[Key]
+			public int Id { get; set; }
+			//Название товара
 			public string Name { get; set; }
-			public string Edizm { get; set; }
-			public decimal Zena { get; set; }
+			//Единица измерения товара
+			public string Measurement { get; set; }
+			//Цена товара
+			public float Price { get; set; }
 		}
 		public class Prihod
 		{
@@ -50,11 +58,11 @@ namespace ConsoleAppAccess
 		public class DataContext : DbContext
 		{
 			public DbSet<Client> Client { get; set; }
-			public DbSet<Tovar> Tovar { get; set; }
+			public DbSet<Product> Product { get; set; }
 
 			protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 			{
-				optionsBuilder.UseJet(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\kis\sklad.mdb;");
+				optionsBuilder.UseJet(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\kis\glagolev.v\sklad.mdb;");
 			}
 		}
 	}
