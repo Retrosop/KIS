@@ -14,10 +14,16 @@ namespace AppSklad
 			InitializeComponent();
 		}
 
-		private void tovarShow_Click(object sender, RoutedEventArgs e)
+		private void productShow_Click(object sender, RoutedEventArgs e)
 		{
-			ProductForm ProductForm = new ProductForm();
-			ProductForm.Show();
+			ProductForm productForm = new ProductForm();
+			productForm.Show();
+		}
+
+		private void supplierShow_Click(object sender, RoutedEventArgs e)
+		{
+			SupplierForm supplierForm = new SupplierForm();
+			supplierForm.Show();
 		}
 	}
 }

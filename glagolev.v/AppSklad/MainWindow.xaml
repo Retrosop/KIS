@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="productShow" Content="Товары" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.745,-1.013" Height="54" Width="133" Click="tovarShow_Click"/>
-        <Button x:Name="postavShow" Content="Поставщики" HorizontalAlignment="Left" Margin="213,28,0,0" VerticalAlignment="Top" Height="54" Width="145"/>
+        <Button x:Name="productShow" Content="Товары" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.745,-1.013" Height="54" Width="133" Click="productShow_Click"/>
+        <Button x:Name="supplierShow" Content="Поставщики" HorizontalAlignment="Left" Margin="213,28,0,0" VerticalAlignment="Top" Height="54" Width="145" Click="supplierShow_Click"/>
         <Button x:Name="prihodShow" Content="Приход" HorizontalAlignment="Left" Margin="410,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.149,-1.691" Height="54" Width="151"/>
         <Button x:Name="queryShow" Content="Запросы" HorizontalAlignment="Left" Margin="618,30,0,0" VerticalAlignment="Top" Height="50" Width="133"/>
         <Button x:Name="reportShow" Content="Отчет" HorizontalAlignment="Left" Margin="24,128,0,0" VerticalAlignment="Top" Height="55" Width="133"/>
