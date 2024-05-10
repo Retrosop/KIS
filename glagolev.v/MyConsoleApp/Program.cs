@@ -5,6 +5,7 @@
 		static void Main()
 		{
 			int a = 4;
+			string c = 3;
 			int b = 8;
             Console.WriteLine("Результат" + Myfunction.Sum(4,8));
             float b = 3f;
