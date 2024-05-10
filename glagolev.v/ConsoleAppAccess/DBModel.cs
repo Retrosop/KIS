@@ -50,6 +50,7 @@ namespace ConsoleAppAccess
 		public class DataContext : DbContext
 		{
 			public DbSet<Client> Client { get; set; }
+			public DbSet<Tovar> Tovar { get; set; }
 
 			protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 			{
