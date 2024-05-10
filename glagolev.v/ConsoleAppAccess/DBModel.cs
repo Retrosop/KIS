@@ -5,7 +5,7 @@ using static ConsoleAppAccess.DBModel;
 
 namespace ConsoleAppAccess
 {
-	internal class DBModel
+	public class DBModel
 	{
 		public class Client
 		{
