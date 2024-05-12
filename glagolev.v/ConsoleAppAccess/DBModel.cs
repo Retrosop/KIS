@@ -7,11 +7,25 @@ namespace ConsoleAppAccess
 {
 	public class DBModel
 	{
+		public class ComboboxItem
+		{
+			public string Text { get; set; }
+			public int Value { get; set; }
+
+			public override string ToString()
+			{
+				return Text;
+			}
+			public string ToKey()
+			{
+				return Value.ToString();
+			}
+		}
 		public class Client
 		{
 			[Key]
 			public int Id { get; set; }
-			public string? NameClient{ get; set; }
+			public string? NameClient { get; set; }
 			public string? Adress { get; set; }
 			public string? Telef { get; set; }
 			public string? Email { get; set; }
@@ -25,15 +39,15 @@ namespace ConsoleAppAccess
 			[Key]
 			public int Id { get; set; }
 			//Название поставщика
-			public string? Name { get; set; }
+			public string Name { get; set; }
 			//Город
-            public string? City { get; set; }
+			public string? City { get; set; }
 			//Улица
-            public string? Street{ get; set; }
+			public string? Street { get; set; }
 			//Телефон
-            public string? Phone { get; set; }
+			public string? Phone { get; set; }
 
-        }
+		}
 		public class Product
 		{
 			[Key]
