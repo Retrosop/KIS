@@ -25,5 +25,12 @@ namespace AppSklad
 			SupplierForm supplierForm = new SupplierForm();
 			supplierForm.Show();
 		}
+
+		private void receiptProductShow_Click(object sender, RoutedEventArgs e)
+		{
+
+			ReceiptProductForm receiptProductForm = new ReceiptProductForm();
+			receiptProductForm.Show();
+		}
 	}
 }
