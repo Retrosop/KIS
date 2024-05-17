@@ -69,6 +69,47 @@ namespace ConsoleAppAccess
 			public int Kolvo { get; set; }
 		}
 
+//База данных Авиаперелетов
+		public class Person
+		{
+			[Key]
+			public int Id { get; set; }
+			public string? First_name { get; set; }
+			// имя пассажира
+			public string? Last_name { get; set; }
+			//фамилия пассажира
+			public string? Email { get; set; }
+			//почта
+			public string? Phone { get; set; }
+			//номер телефона
+			public int Age { get; set; }
+			//возраст
+
+		}
+
+		public class Ticket
+		{
+			[Key]
+			public int Id { get; set; }
+			public string? Ticket_Number { get; set; }
+			public string? Departure { get; set; }
+			public string? Destination { get; set; }
+			public string? Departure_Time { get; set; }
+			public string? Arrival_Time { get; set; }
+			public string? Type_Passange { get; set; }
+			public string? Privileges { get; set; }
+			public string? Place_Number { get; set; }
+			public string? Place_Letter { get; set; }
+		}
+		public class Airplane
+		{
+			[Key]
+			public int Id { get; set; }
+			public string? Airline { get; set; }
+			public string? Airplane_Model { get; set; }
+			public string? Capacity { get; set; }
+		}
+
 		public class DataContext : DbContext
 		{
 			public DbSet<Client> Client { get; set; }
@@ -80,6 +121,7 @@ namespace ConsoleAppAccess
 				optionsBuilder.UseJet(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\kis\checherina.e\sklad.mdb;");
 			}
 		}
+
 	}
 }
 
