@@ -91,22 +91,22 @@ namespace ConsoleAppAccess
 		{
 			[Key]
 			public int Id { get; set; }
-			public string? Ticket_Number { get; set; }
+			public string? Ticket_number { get; set; }
 			public string? Departure { get; set; }
 			public string? Destination { get; set; }
-			public string? Departure_Time { get; set; }
-			public string? Arrival_Time { get; set; }
-			public string? Type_Passange { get; set; }
+			public string? Departure_time { get; set; }
+			public string? Arrival_time { get; set; }
+			public string? Type_passange { get; set; }
 			public string? Privileges { get; set; }
-			public string? Place_Number { get; set; }
-			public string? Place_Letter { get; set; }
+			public string? Place_number { get; set; }
+			public string? Place_letter { get; set; }
 		}
 		public class Airplane
 		{
 			[Key]
 			public int Id { get; set; }
-			public string? Airline { get; set; }
-			public string? Airplane_Model { get; set; }
+			public string? Airline_name { get; set; }
+			public string? Airplane_model { get; set; }
 			public string? Capacity { get; set; }
 		}
 
