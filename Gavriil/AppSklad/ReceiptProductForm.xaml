@@ -1,0 +1,30 @@
+﻿<Window x:Class="AppSklad.ReceiptProductForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSklad"
+        mc:Ignorable="d"
+        Title="Поставщики продукции" Height="450" Width="800">
+    <Grid>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="42,384,0,0" VerticalAlignment="Top" Width="199"/>
+        <Button Content="Обновить" HorizontalAlignment="Left" Margin="277,384,0,0" VerticalAlignment="Top" Width="202"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="520,384,0,0" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="52,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Поставщик" HorizontalAlignment="Left" Margin="217,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.519,0.079"/>
+        <Label Content="Количество" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата поступления" HorizontalAlignment="Left" Margin="531,22,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="363,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="42,103,41,80">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox x:Name="comboboxProduct" HorizontalAlignment="Left" Margin="52,64,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboboxProduct_SelectionChanged"/>
+        <ComboBox x:Name="comboboxSupplier" HorizontalAlignment="Left" Margin="228,64,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboboxSupplier_SelectionChanged"/>
+
+    </Grid>
+</Window>

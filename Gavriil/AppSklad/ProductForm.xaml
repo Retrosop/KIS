@@ -1,0 +1,29 @@
+﻿<Window x:Class="AppSklad.ProductForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSklad"
+        mc:Ignorable="d"
+        Title="Форма товары" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="addTovar" Content="Добавить" HorizontalAlignment="Left" Margin="41,383,0,0" VerticalAlignment="Top" Height="28" Width="223" Click="addProduct_Click"/>
+        <Button x:Name="deleteTovar" Content="Удалить" HorizontalAlignment="Left" Margin="564,383,0,0" VerticalAlignment="Top" Height="28" Width="197" Click="deleteProduct_Click"/>
+        <Button x:Name="updateTovar" Content="Обновить" HorizontalAlignment="Left" Margin="306,383,0,0" VerticalAlignment="Top" Height="28" Width="224" Click="updateProduct_Click"/>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="41,18,0,0" VerticalAlignment="Top"/>
+        <Label Content="Единица измерения" HorizontalAlignment="Left" Margin="385,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="643,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InputName" HorizontalAlignment="Left" Margin="117,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248"/>
+        <TextBox x:Name="InputMeasurement" HorizontalAlignment="Left" Margin="510,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="InputPrice" HorizontalAlignment="Left" Margin="692,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69"/>
+        <ListView x:Name="productList" Margin="41,64,39,75" MouseDoubleClick="productList_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="160" Header="Название"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Measurement}" Width="160" Header="Единица измерения"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Price}" Width="50" Header="Цена"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
