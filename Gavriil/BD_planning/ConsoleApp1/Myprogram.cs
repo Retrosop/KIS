@@ -11,7 +11,7 @@ namespace ConsoleApp1
 
 		static void Main(string[] args)
 		{
-            Console.WriteLine("Hw");
+			Item t1 = new Item();
         }
 	}
 }
