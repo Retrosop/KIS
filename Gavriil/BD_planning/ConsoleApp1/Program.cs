@@ -119,11 +119,13 @@ class Order
 {
     public int orderNumber;
     public Client client;
-    public int cost;
     public Item item;
 }
 
 class Item
 {
+    public string category;
+    public int cost;
+    public int sale;
     public string name;
 }
