@@ -32,5 +32,11 @@ namespace AppSklad
 			ReceiptProductForm receiptProductForm = new ReceiptProductForm();
 			receiptProductForm.Show();
 		}
-	}
+
+		private void airplaneShow_Click(object sender, RoutedEventArgs e)
+		{
+			AirplaneForm airplaneForm = new AirplaneForm();
+			airplaneForm.Show();
+		}
+    }
 }
