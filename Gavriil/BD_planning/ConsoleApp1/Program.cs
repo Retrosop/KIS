@@ -1,131 +1,59 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
-class MyProgram
+
+public class Client
 {
-    static void Main()
-    {
-        Item holod = new Item();
-        holod.name = "холодильник";
-
-        Client ivan = new Client();
-        ivan.lastname = "Ivanov";
-        ivan.firstname = "ivan";
-        //ivan.age = 21;
-
-        Order zakaz050424 = new Order();
-        zakaz050424.client = ivan;
-        zakaz050424.orderNumber = 4;
-        zakaz050424.cost = 2300;
-        zakaz050424.item = holod;
-
-        Console.WriteLine("HW");
-
-        List<Client> listClient = new List<Client> {
-
-            new Client()
-            {
-                lastname = "Smith",
-                firstname = "John",
-                Age  = 35,
-                passport = "abadabac",
-                height = 175,
-                Netto = 50000
-
-            },
-            new Client() {
-                lastname = "Johnson",
-                firstname = "Emily",
-                Age  = 60,
-                passport = "CDabadabac",
-                height = 150,
-                Netto = 6666
-            }
-
-        };
-       
-
-
-        listClient.Add(new Client
-        {
-            lastname = "somename",
-            firstname = "someFirstname",
-            Age = 60,
-            passport = "CDabadabac",
-            height = 150,
-            Netto = 6666
-
-
-
-        }); 
-        
-        foreach (var v  in listClient) { // просто вывод по именам
-            Console.WriteLine(v.firstname);
-        }
-        foreach (var v in listClient) // редактирование полей класса 
-        {
-            if (v.lastname == "somename")
-            {
-                v.lastname = "1234";
-            }
-            Console.WriteLine(v.lastname);
-        }
-        foreach (var v in listClient) {
-            if (v.lastname == "1234") {
-                v.firstname = "empty";
-                v.lastname = "empty";
-                v.Age = 12;
-
-            
-            } ;
-
-        
-        
-        }
-
-    }
-}
-
-class Client
-{
-    public string lastname;
-    public string firstname;
+    public int ClientId { get; set; }
+    public string Lastname { get; set; }
+    public string Firstname { get; set; }
     private int age = 0;
-    public string passport;
-    public decimal height;
-    public decimal Netto;
+    public string Passport { get; set; }
+    public decimal Height { get; set; }
+    public decimal Netto { get; set; }
 
     public int Age
     {
-        get
-        {
-            return age;
-        }
+        get { return age; }
         set
         {
             if (value < 0)
             {
-                Console.WriteLine("Возраст должен быть больше 0");
+                throw new ArgumentException("Возраст должен быть больше 0");
             }
-            else
-            {
-                age = value;
-            }
+            age = value;
         }
     }
 }
 
-class Order
+public class Order
 {
-    public int orderNumber;
-    public Client client;
-    public Item item;
+    public int OrderId { get; set; }
+    public int OrderNumber { get; set; }
+    public int ClientId { get; set; }
+    public Client Client { get; set; }
+    public int ItemId { get; set; }
+    public Item Item { get; set; }
 }
 
-class Item
+public class Item
 {
-    public string category;
-    public int cost;
-    public int sale;
-    public string name;
+    public int ItemId { get; set; }
+    public string Category { get; set; }
+    public int Cost { get; set; }
+    public int Sale { get; set; }
+    public string Name { get; set; }
+}
+
+public class AppDbContext : DbContext
+{
+    public DbSet<Client> Clients { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<Item> Items { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlite("Data Source=app.db");
+    }
 }
