@@ -1,0 +1,15 @@
+H:\Labs\Для Даши C#\LabKIS2\bin\Debug\net6.0\LabKIS2.exe
+H:\Labs\Для Даши C#\LabKIS2\bin\Debug\net6.0\LabKIS2.deps.json
+H:\Labs\Для Даши C#\LabKIS2\bin\Debug\net6.0\LabKIS2.runtimeconfig.json
+H:\Labs\Для Даши C#\LabKIS2\bin\Debug\net6.0\LabKIS2.dll
+H:\Labs\Для Даши C#\LabKIS2\bin\Debug\net6.0\LabKIS2.pdb
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.csproj.AssemblyReference.cache
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.GeneratedMSBuildEditorConfig.editorconfig
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.AssemblyInfoInputs.cache
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.AssemblyInfo.cs
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.csproj.CoreCompileInputs.cache
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.dll
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\refint\LabKIS2.dll
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.pdb
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\LabKIS2.genruntimeconfig.cache
+H:\Labs\Для Даши C#\LabKIS2\obj\Debug\net6.0\ref\LabKIS2.dll
