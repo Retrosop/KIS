@@ -58,7 +58,7 @@ namespace ConsoleApp1
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlite("Data Source=app.db");
+			optionsBuilder.UseSqlite("Data Source=C:\\kis\\Gavriil\\BD_planning\\ConsoleApp1\\app.db");
 		}
 	}
 
