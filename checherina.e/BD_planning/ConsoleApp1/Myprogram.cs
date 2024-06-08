@@ -1,65 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace AirlineTicketSystem
 {
-	class Program
-	{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            using (AirlineDbContext db = new AirlineDbContext())
+            {
+                // Добавление записей в таблицу Passengers
+                Passenger passenger1 = new Passenger
+                {
+                    FirstName = "Иван",
+                    LastName = "Иванов",
+                    Age = 30,
+                    PassportNumber = "AB123456"
+                };
 
-		static void Main(string[] args)
-		{
-			using (AppDbContext db = new AppDbContext())
-			{
+                db.Passengers.Add(passenger1);
+                db.SaveChanges();
 
-				//Добавление записей в таблицу Товары
-				Item t1 = new Item();
-				t1.Name = "Тестов Тест";
-				t1.Category = "Тестов Тест";
-				t1.Cost = 1;
-				t1.Sale = 2;
-				t1.Rank = "2";
-				t1.Status = "3";
+                // Изменение имени пассажира
+                Passenger passengerToUpdate = db.Passengers.SingleOrDefault(p => p.PassengerId == 1);
+                if (passengerToUpdate != null)
+                {
+                    passengerToUpdate.FirstName = "Петр";
+                    db.SaveChanges();
+                }
 
+                // Удаление пассажира с PassengerId = 1
+                Passenger passengerToDelete = db.Passengers.SingleOrDefault(p => p.PassengerId == 1);
+                if (passengerToDelete != null)
+                {
+                    db.Passengers.Remove(passengerToDelete);
+                    db.SaveChanges();
+                }
 
+                // Вывод всех пассажиров
+                var allPassengers = db.Passengers;
+                foreach (var passenger in allPassengers)
+                {
+                    Console.WriteLine($"{passenger.FirstName} {passenger.LastName} - {passenger.Age} years old");
+                }
 
-				db.Items.Add(t1);
-				db.SaveChanges();
+                // Добавление записей в таблицу Flights
+                Flight flight1 = new Flight
+                {
+                    FlightNumber = "AA123",
+                    DepartureCity = "New York",
+                    DestinationCity = "Los Angeles",
+                    DepartureTime = DateTime.Now,
+                    ArrivalTime = DateTime.Now.AddHours(5),
+                    TicketPrice = 250
+                };
 
-				t1 = db.Items.SingleOrDefault(s => s.ItemId == 1);
-				if (t1 != null)
-				{
-					t1.Name = "454545";
-					db.SaveChanges();
-				}
+                db.Flights.Add(flight1);
+                db.SaveChanges();
 
-				//Удаление строки в таблице Клиенты с первичным ключом Id=2
-				t1 = db.Items.SingleOrDefault(s => s.ItemId == 4);
-				if (t1 != null)
-				{
-					//удаляем объект
-					db.Items.Remove(t1);
-					db.SaveChanges();
-				}
+                // Добавление записей в таблицу Tickets
+                Ticket ticket1 = new Ticket
+                {
+                    PassengerId = 2, // предположим, что у пассажира с Id = 2 был куплен билет на рейс
+                    FlightId = 1,    // предположим, что рейс с Id = 1
+                    BookingTime = DateTime.Now
+                };
 
-				//Выборка все названий товаров
-				var allitem = db.Items.Select(x => x.Name);
-				foreach (var xname in allitem)
-				{
-					Console.WriteLine($"{xname}");
-				}
+                db.Tickets.Add(ticket1);
+                db.SaveChanges();
 
-				//Выборка всех товаров
-				var allClient = db.Items;
-				foreach (var xitem in allClient)
-				{
-					Console.WriteLine($"{xitem.Name} - {xitem.Category}");
-				}
-
-			}
-		}
-	}
+                // Вывод всех билетов
+                var allTickets = db.Tickets;
+                foreach (var ticket in allTickets)
+                {
+                    Console.WriteLine($"Passenger: {ticket.Passenger.FirstName} {ticket.Passenger.LastName}, Flight: {ticket.Flight.FlightNumber}, Booking Time: {ticket.BookingTime}");
+                }
+            }
+        }
+    }
 }
