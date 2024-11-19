@@ -113,7 +113,7 @@ object Form2: TForm2
     UserPassword = 'pgu2023pgu2023'
     Host = '91.219.194.4'
     ConnectOptions = []
-    ConnectionCharacterSet = 'utf8'
+    ConnectionCharacterSet = 'latin1'
     Params.Strings = (
       'Port=3306'
       'TIMEOUT=30'

@@ -7,3 +7,6 @@
 /glagolev.v/AppSklad/.vs
 /glagolev.v/AppSklad/bin
 /glagolev.v/AppSklad/obj
+/glagolev.v/delphi/MyDB/*.exe
+/glagolev.v/scharp/MyDB/ConnectDB/bin
+/glagolev.v/scharp/MyDB/ConnectDB/obj
