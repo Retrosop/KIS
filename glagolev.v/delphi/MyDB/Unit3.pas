@@ -4,10 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs;
+  Dialogs, DB, mySQLDbTables, ExtCtrls, DBCtrls, Grids, DBGrids;
 
 type
   TPostavForm = class(TForm)
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    MySQLDatabase1: TMySQLDatabase;
+    MySQLTable1: TMySQLTable;
+    DataSource1: TDataSource;
   private
     { Private declarations }
   public

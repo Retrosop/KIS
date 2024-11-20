@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 592
-  Top = 398
+  Left = 247
+  Top = 480
   Width = 1024
   Height = 510
   Caption = #1058#1086#1074#1072#1088#1099
@@ -72,9 +72,9 @@ object Form2: TForm2
       end>
   end
   object DBNavigator1: TDBNavigator
-    Left = 112
-    Top = 384
-    Width = 240
+    Left = 48
+    Top = 360
+    Width = 920
     Height = 25
     DataSource = DataSource1
     TabOrder = 1
